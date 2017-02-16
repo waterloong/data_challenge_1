@@ -22,10 +22,11 @@ mean(y.test.bag == y.label[, 1])
 y.test.bag <- predict(fit.bag, newdata = test.bag)
 
 for (i in 1:500) {
-  if (y.test.rf[i] == y.test.xgboost[i]) {
+  if (y.test.rf[i] == y.test.xgboost[i] && y.test.ada[i] == y.test.xgboost[i]) {
     y.test.bag[i] = y.test.rf[i]
   }
 }
+
 
 # fit.bag <- glm(formula = formula.bag, data = train.bag[index, ], family = binomial(link='logit'))
 # 

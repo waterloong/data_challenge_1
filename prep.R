@@ -37,11 +37,3 @@ index <- createDataPartition(y.label[, 1], p = 0.9, list = F)
 partition.train <- train[index, ]
 partition.test <- train[-index, ]
 
-source("fisher.R")
-source("linear.R")
-source("svm.R")
-source("nb.R")
-source("tree.R")
-source("nn.R")
-source("extreme.R")
-

@@ -6,7 +6,7 @@ x.test.m <- data.matrix(x.test)
 fit.xgboost <- xgboost(#params = list(eta = 0.1, max_depth = 9),
                         data = x.train.m, 
                        label = as.numeric(y.label[, 1]) - 1, 
-                       nrounds = 300, 
+                       nrounds = 80, 
                        objective = "binary:logistic",
                        verbose = 1)
 y.test.xgboost <- as.integer(predict(fit.xgboost, newdata = x.train.m) > 0.5)
